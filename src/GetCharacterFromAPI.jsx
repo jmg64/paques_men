@@ -25,11 +25,12 @@ class GetCharacter extends Component {
       });
   }
   render() {
+    console.log(this.props.character);
     const character = this.state;
 
     return (
       <div>
-        <DisplayCardCharacter {...character} />
+        <DisplayCardCharacter {...character} {...this.props.characterButton}/>
       </div>
     );
   }

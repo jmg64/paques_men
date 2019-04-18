@@ -25,7 +25,7 @@ class GetEggs extends Component {
 
   render() {
       const eggs= this.state
-      console.log(this.state.eggButton);
+      
       
 
     
