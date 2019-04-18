@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import GetData from './GetDataFromAPI';
+import GetEggs from './GetEggFromAPI';
+import GetCharacter from "./GetCharacterFromAPI"
 
 class App extends Component {
   render() {
-    return (<div className='App' >
-    
-      <GetData />
+    return (<div>
+      <GetEggs />
+      <GetCharacter />
     </div>
     );
   }
