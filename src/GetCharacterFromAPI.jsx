@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { Component } from "react";
-import EggButton from "./Button";
 import DisplayCardCharacter from "./DisplayCardCharacter";
 
 class GetCharacter extends Component {
@@ -25,7 +24,6 @@ class GetCharacter extends Component {
     
     return (
       <div>
-        <EggButton {...character} />
         <DisplayCardCharacter {...character} />
       </div>
     );
