@@ -7,8 +7,9 @@ class GetEggs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eggs: []
-    };
+      eggs: [],
+      eggButton: false,
+        };
   }
 
   componentDidMount() {
@@ -17,15 +18,20 @@ class GetEggs extends Component {
       
     });
   }
+
+  clickHandler= () => {
+      this.setState({eggButton : true});
+    };
+
   render() {
       const eggs= this.state
-      console.log(eggs);
+      console.log(this.state.eggButton);
       
 
     
     return (
       <div>
-        <EggButton {...eggs} />
+        <EggButton {...eggs} handleClick={this.clickHandler} />
         <DisplayCardEgg {...eggs} />
       </div>
     );

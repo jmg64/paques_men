@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {Button} from 'reactstrap'
 import './Button.css'
 
-class EggButton extends Component {
-    render() {         
+class EggButton extends Component {    
+    render() { 
         return (<div>
-            <Button color="info">Get random egg</Button>{' '}
+            <Button color="info" onClick={ () => this.props.handleClick()}>Get random egg</Button>{' '}
         </div>  );
     }
 }
