@@ -12,13 +12,15 @@ class GetData extends Component {
 
   componentDidMount() {
     axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random").then(res => {
-      this.setState({ eggs: res.data });
+      this.setState({ eggs: {image:res.data.image, name:res.data.name, rarity:res.data.rarity} });
       
     });
   }
   render() {
-    const { eggs } = this.state;
-    console.log(eggs);
+      const eggs= this.state
+      console.log(eggs);
+      
+
     
     return (
       <div>
@@ -26,6 +28,6 @@ class GetData extends Component {
       </div>
     );
   }
-}
+  }
 
 export default GetData;
