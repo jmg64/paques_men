@@ -10,9 +10,10 @@ class GetEggs extends Component {
       eggs: [],
       eggButton: false,
         };
+        this.getEgg=this.getEgg.bind(this)
   }
 
-  componentDidMount() {
+  getEgg() {
     axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random").then(res => {
       this.setState({ eggs: {image:res.data.image, name:res.data.name, rarity:res.data.rarity} });
       
@@ -31,7 +32,7 @@ class GetEggs extends Component {
     
     return (
       <div>
-        <EggButton {...eggs} handleClick={this.clickHandler} />
+        <EggButton {...eggs} refreshEgg={() => this.getEgg()} handleClick={() => this.clickHandler()}/>
         <DisplayCardEgg {...eggs} />
       </div>
     );

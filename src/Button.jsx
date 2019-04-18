@@ -5,7 +5,7 @@ import './Button.css'
 class EggButton extends Component {    
     render() { 
         return (<div>
-            <Button color="info" onClick={ () => this.props.handleClick()}>Get random egg</Button>{' '}
+            <Button color="info" onClick={() =>{ this.props.handleClick() ;this.props.refreshEgg(); }}>Get random egg</Button>{' '}
         </div>  );
     }
 }
