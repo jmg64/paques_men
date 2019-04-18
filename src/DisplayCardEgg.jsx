@@ -12,11 +12,11 @@ class DisplayCardEgg extends Component {
         this.props.eggButton ? (button = "") : (button = "Content-toggle");
         return (
             <div className="Cards">
-                <Card className={button}>
+                <Card style={{ width: "40%" }} className={button}>
                     <CardBody>
                         <CardTitle>Name : {this.props.eggs.name}</CardTitle>
                         <Button>
-                            <CardImg style={{ width: "25%" }} src={this.props.eggs.image} alt="Egg" />
+                            <CardImg style={{ width: "30%" }} src={this.props.eggs.image} alt="Egg" />
                         </Button>
                         <CardSubtitle>Rarity : {this.props.eggs.rarity}</CardSubtitle>
                     </CardBody>

@@ -8,11 +8,11 @@ class DisplayCardCharacter extends Component {
     }
     render() {
         return (
-            <div className="Cards">
-                <Card>
+            <div className="Cards1">
+                <Card style={{ width: "40%" }}>
                     <CardBody>
                         <CardTitle>Name : {this.props.character.name}</CardTitle>
-                        <CardImg style={{ width: "25%" }} src={this.props.character.image} alt="Egg" />
+                        <CardImg style={{ width: "30%" }} src={this.props.character.image} alt="Egg" />
                         <CardSubtitle>Species : {this.props.character.species}</CardSubtitle>
                         <CardSubtitle>Origin : {this.props.character.origin}</CardSubtitle>
                     </CardBody>
