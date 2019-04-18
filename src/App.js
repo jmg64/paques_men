@@ -4,7 +4,8 @@ import Button from './Button';
 
 class App extends Component {
   render() {
-    return (<div>
+    return (<div className='App' >
+    
       <Button />
     </div>
     );

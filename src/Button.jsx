@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Button} from 'reactstrap'
+import './Button.css'
 
 class EggButton extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class EggButton extends Component {
     }
     render() { 
         return (<div>
-            <Button color="info">info</Button>{' '}
+            <Button color="info">Get random egg</Button>{' '}
         </div>  );
     }
 }
