@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
 import EggButton from "./Button";
+import DisplayCardEgg from "./DisplayCardEgg";
 
-class GetData extends Component {
+class GetEggs extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,9 +26,10 @@ class GetData extends Component {
     return (
       <div>
         <EggButton {...eggs} />
+        <DisplayCardEgg {...eggs} />
       </div>
     );
   }
   }
 
-export default GetData;
+export default GetEggs;
