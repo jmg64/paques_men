@@ -27,7 +27,7 @@ class GetCharacter extends Component {
 
         return (
             <div>
-                <DisplayCardCharacter character={character} characterButton={this.props.characterButton} />
+                <DisplayCardCharacter {...character} character={character} characterButton={this.props.characterButton} />
             </div>
         );
     }
