@@ -22,7 +22,7 @@ class Easter extends Component {
 
         return (
             <div>
-                <img className={modal} src={KEKE} alt="KEKE" />;
+                <img className={modal} src={KEKE} alt="KEKE" />
                 <Button className="ButtonEaster" onClick={() => this.bidule()} />
             </div>
         );
