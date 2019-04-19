@@ -6,8 +6,9 @@ import GetEggs from './GetEggFromAPI';
 class App extends Component {
   render() {
     return (<div>
+      <body>
       <GetEggs />
-  
+      </body>
     </div>
     );
   }

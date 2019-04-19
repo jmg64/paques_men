@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { Container, Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./DisplayCardCharacter.css";
 
 class DisplayCardCharacter extends Component {
@@ -10,16 +10,16 @@ class DisplayCardCharacter extends Component {
     render() {
         let buttonStyle = this.props.characterButton ? "" : "button";
         return (
-            <div className="Cards">
+            <Container className="Cards-character">
                 <Card className={buttonStyle}>
                     <CardBody>
                         <CardTitle>Name : {this.props.character.name}</CardTitle>
                         <CardImg style={{ width: "30%" }} src={this.props.character.image} alt="Egg" />
-                        <CardSubtitle>Species : {this.props.character.species}</CardSubtitle>
+                        <CardSubtitle className="Marge">Species : {this.props.character.species}</CardSubtitle>
                         <CardSubtitle>Origin : {this.props.character.origin}</CardSubtitle>
                     </CardBody>
                 </Card>
-            </div>
+            </Container>
         );
     }
 }
