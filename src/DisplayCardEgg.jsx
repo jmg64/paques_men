@@ -12,24 +12,22 @@ class DisplayCardEgg extends Component {
     }
 
     clickHandle = () => {
-        this.setState({ characterButton: true });
+        this.setState({ characterButton: !this.state.characterButton });
     };
 
     render() {
-        const character = this.state;
-
         let button;
         this.props.eggButton ? (button = "") : (button = "Content-toggle");
         return (
             <div className="Cards">
-                <Card style={{ width: "40%" }} className={button}>
+                <Card style={{ width: "100%" }} className={button}>
                     <CardBody>
                         <CardTitle>Name : {this.props.eggs.name}</CardTitle>
-                        <Button onClick={() => this.clickHandle}>
+                        <Button onClick={this.clickHandle}>
                             <CardImg style={{ width: "50%" }} src={this.props.eggs.image} alt="Egg" />
                         </Button>
                         <CardSubtitle>Rarity : {this.props.eggs.rarity}</CardSubtitle>
-                        <GetCharacter {...character} />
+                        <GetCharacter characterButton={this.state.characterButton} />
                     </CardBody>
                 </Card>
             </div>

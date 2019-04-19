@@ -8,11 +8,10 @@ class DisplayCardCharacter extends Component {
         this.state = {};
     }
     render() {
-        let button;
-        this.props.characterButton ? (button = "") : (button = "Content-toggle");
+        let buttonStyle = this.props.characterButton ? "" : "button";
         return (
             <div className="Cards">
-                <Card className={button}>
+                <Card className={buttonStyle}>
                     <CardBody>
                         <CardTitle>Name : {this.props.character.name}</CardTitle>
                         <CardImg style={{ width: "30%" }} src={this.props.character.image} alt="Egg" />
