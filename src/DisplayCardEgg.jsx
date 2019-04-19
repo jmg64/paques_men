@@ -12,7 +12,7 @@ class DisplayCardEgg extends Component {
     }
 
     clickHandle = () => {
-        this.setState({ characterButton: !this.state.characterButton });
+        this.setState({ characterButton: true });
     };
 
     render() {
